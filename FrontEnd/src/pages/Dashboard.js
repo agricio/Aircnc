@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import api from '../services/api';
 
 import './Dashboard.css';
 
 export default function Dashboard() {
     const [spots, setSpots] = useState([]);
+    const history = useHistory();
+
     useEffect(() => {
         async function loadSpots(){
         const user_id = localStorage.getItem('user');
@@ -18,8 +20,15 @@ export default function Dashboard() {
     loadSpots();
 
     }, []);
+
+    function handleLogout() {
+        localStorage.clear();
+        history.push('/');
+    }
+
     return(
         <>
+        <p>Welcome: <strong>{`${ localStorage.getItem('user_email')}`}</strong></p>
          <ul className="spot-list">
              {spots.map( spot => (
                  <li key={spot._id}>
@@ -32,6 +41,7 @@ export default function Dashboard() {
          <Link to="/NewSpot">
             <button className="btn">Add new Spot</button> 
          </Link>
+         <button className="logoff" onClick={() => handleLogout() } >logout</button> 
         </>
     );
 }

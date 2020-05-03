@@ -29,3 +29,19 @@ ul.spot-list li span {
     font-size: 15px;
     color: #999;
 }
+
+.logoff {
+    border: 0;
+    width: auto;
+    height: 24px;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 22;
+    background: none;
+    color: #444;
+    cursor: pointer;
+}
+
+.logoff:hover {
+    color: #999;
+}

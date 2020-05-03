@@ -66,6 +66,8 @@ export default function NewSpot({ history }) {
              />
 
              <button type="submit" className="btn">Add Spot</button>
+             <button className="logoff" onClick={() => history.push('/dashboard') } > Back </button>
+
           </form>
     );
 }

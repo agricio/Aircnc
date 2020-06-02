@@ -45,3 +45,46 @@ ul.spot-list li span {
 .logoff:hover {
     color: #999;
 }
+
+ul.notifications { 
+    list-style: none;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, .05);
+    border: 1px solid rgba(97, 97, 97, 0.2);
+}
+
+ul.notifications li {
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ul.notifications li button {
+    margin-right: 10px;
+    border: 0;
+    font-weight: bold;
+    margin-top: 5px;
+    cursor: pointer;
+    background: none;
+    margin-bottom: 5px;
+}
+
+ul.notifications li button.accept {
+    color: #83c870;
+}
+
+ul.notifications li button.accept:hover {
+    color: #659e55;
+}
+
+ul.notifications li button.reject {
+    color: #e55e5e;
+}
+
+ul.notifications li button.reject:hover {
+    color: #af4949;
+}

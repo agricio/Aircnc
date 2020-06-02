@@ -26,7 +26,7 @@ export default function NewSpot({ history }) {
         data.append('techs', techs);
         data.append('price', price);
 
-        const response = await api.post('/spot', data, {headers: { user_id }} )
+        await api.post('/spot', data, {headers: { user_id }} )
 
         history.push('/dashboard');
 

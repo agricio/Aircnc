@@ -28,12 +28,9 @@ export default function Login({ navigation }) {
     await AsyncStorage.setItem('techs', techs);
     await AsyncStorage.setItem('email', email);
 
-    console.log(email)
-
     navigation.navigate('List');
 
   }
-
 
   return (
     <KeyboardAvoidingView enabled={Platform.OS == 'ios'} behavior="padding" style={styles.container}>

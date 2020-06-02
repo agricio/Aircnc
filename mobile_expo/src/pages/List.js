@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Image, AsyncStorage, Text, TouchableOpacity, View } from 'react-native';
-
+import { Alert, SafeAreaView, ScrollView, StyleSheet, Image, AsyncStorage, Text, TouchableOpacity, View } from 'react-native';
+import socketio from 'socket.io-client';
 import SpotList from '../components/SpotList';
 import logo from '../assets/logo.png';
 import { Feather } from '@expo/vector-icons'; 
@@ -9,6 +9,18 @@ export default function List({ navigation }) {
   const [techs, setTechs] = useState([]);
   const [email, setEmail] = useState('');
 
+    useEffect(() => {
+      AsyncStorage.getItem('user').then(user_id => {
+        const socket = socketio('http://10.0.0.33:3333', {
+          query: { user_id }
+        })
+  
+        socket.on('booking_response', booking => {
+          Alert.alert(`Your reservation at ${booking.spot.company} for ${booking.date} was ${booking.approved ? 'APPROVED' : 'REJECTED'}`);
+        })
+      })
+    }, []);
+  
   useEffect(() => {
     handleLogName();
     AsyncStorage.getItem('techs').then(storagedTechs => {

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView, TextInput, Text, View, TouchableOpacity, AsyncStorage, Alert, Image } from 'react-native';
+import { StyleSheet, SafeAreaView, TextInput, Text, TouchableOpacity, AsyncStorage, Alert, Image } from 'react-native';
 
 import api from '../services/api';
 
 export default function Book({ navigation }) {
   const [date, setDate] = useState('');
-  const id = navigation.getParam('id');
+  const id = navigation.getParam('_id');
 
   async function handleSubmit() {
     const user_id = await AsyncStorage.getItem('user');

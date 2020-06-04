@@ -4,7 +4,6 @@
 <p align="center" >
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
-
 </br>
 <h5 align="center">
   :rocket: <a href="#rocket-tecnologias">Tecnologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -28,9 +27,9 @@ This project was developed with the following technologies:
 
 ## 💻 The Project
 
-Aircnc is a project that will connect companys and programmers. The application works when a company open a rental space !
+Aircnc is a project that will connect companys and programmers. The application works when a company open a rental space in your building to the programmer can rent!
 
-This App uses NodeJS in back-end and a no-relacional database MongoDB to share the data. It also uses json API Rest to comunicate the back-end server with front-end biulded in ReactJS and the mobile app using React-Native and Expo CLI in the develop and runs on any mobile plataforms.    
+This project is a copy of airbnb idea and used as porfolio with the intention of show skills. The project uses: NodeJS in back-end and a no-relacional database MongoDB to share the data. It also uses json API Rest to comunicate the back-end server with front-end biulded in ReactJS and the mobile app using React-Native and Expo CLI in the develop and runs on any mobile plataforms.    
 
 
 <h3> 📱 Images of Project Mobile </br> </br>
